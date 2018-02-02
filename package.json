@@ -10,5 +10,8 @@
   "license": "ISC",
   "bin": {
     "mwpm": "./src/cli.js"
+  },
+  "dependencies": {
+    "really-simple-args": "^1.0.1"
   }
 }

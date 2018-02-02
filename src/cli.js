@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require("fs");
+const args = require("really-simple-args")();
 
 // get current working directory
 const wd = process.cwd();
@@ -15,4 +16,21 @@ if(!fs.existsSync(`${wd}/mwpm.config.json`)) {
 // load config file
 const CONFIG = require(`${wd}/mwpm.config.json`);
 
-console.log(CONFIG);
+// check what the user asked for
+if(args.getAmountOfArguments() < 1) {
+    console.warn("Please specify what you want to do.");
+
+    process.exit(-2);
+}
+
+const commandArg = args.getArgumentByIndex(0);
+
+switch(commandArg) {
+    case "install":
+        // do something
+        console.log("Install!");
+        break;
+    default:
+        console.warn(`${commandArg} not recognized as a valid command.`);
+        process.exit(-3);
+}
