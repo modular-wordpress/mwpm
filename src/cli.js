@@ -27,8 +27,7 @@ const commandArg = args.getArgumentByIndex(0);
 
 switch(commandArg) {
     case "install":
-        // do something
-        console.log("Install!");
+        require("./actions/install")(CONFIG.parentLocation);
         break;
     default:
         console.warn(`${commandArg} not recognized as a valid command.`);
