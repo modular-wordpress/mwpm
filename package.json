@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ivan Mattie",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "mwpm": "./src/cli.js"
+  }
 }
