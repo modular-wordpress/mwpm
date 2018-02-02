@@ -1,10 +1,17 @@
+const fs = require("fs");
 const {execute, deleteDirectory} = require("./../util");
 
 module.exports = async (path = "parent") => {
     let result = null;
     const parentURL = "https://github.com/modular-wordpress/parent-theme.git";
 
-    console.log("Installing...")
+    console.log("Installing...");
+    
+    // Check to see if a copy of the repository already exists, if it does, 
+    // delete it.
+    if(fs.existsSync(`${process.cwd()}/${path}`)) {
+        await deleteDirectory(`${process.cwd()}/${path}`);
+    }
 
     // clone the repository
     try {
@@ -15,7 +22,7 @@ module.exports = async (path = "parent") => {
     }
 
     // clean up the git bits
-    await deleteDirectory(`${process.cwd()}/${path}/.git/`);
+    await deleteDirectory(`${process.cwd()}/${path}/.git`);
 
     // and we're done
     console.log(result.stdout);
