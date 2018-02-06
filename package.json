@@ -12,6 +12,7 @@
     "mwpm": "./src/cli.js"
   },
   "dependencies": {
+    "ncp": "^2.0.0",
     "really-simple-args": "^1.0.1"
   }
 }

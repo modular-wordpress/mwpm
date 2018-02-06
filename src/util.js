@@ -1,6 +1,7 @@
 const {exec} = require('child_process');
 const fs = require("fs");
 const path = require("path");
+const ncp = require("ncp").ncp;
 
 /**
  * @typedef {Object} ExecuteResults
@@ -84,5 +85,16 @@ module.exports = {
             });
         });
     },
-    deleteDirectory: deleteDirectory
+    deleteDirectory: deleteDirectory,
+    cp: function(dir, targetDir) {
+        return new Promise((resolve, reject) => {
+            ncp(dir, targetDir, (err) => {
+                if(err) {
+                    reject(err);
+                }
+
+                resolve(true);
+            });
+        });
+    }
 };

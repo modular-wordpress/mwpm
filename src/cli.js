@@ -29,6 +29,9 @@ switch(commandArg) {
     case "install":
         require("./actions/install")(CONFIG.parentLocation);
         break;
+    case "add":
+        require("./actions/add")(args, CONFIG);
+        break;
     default:
         console.warn(`${commandArg} not recognized as a valid command.`);
         process.exit(-3);
