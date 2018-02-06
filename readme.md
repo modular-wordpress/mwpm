@@ -1,17 +1,31 @@
 # Modular Wordpress Package Manager
 
-Coming soon!
+Simple package manager that helps load the Modular Wordpress content modules.
 
-**WIP**
+This is in a working, but incomplete state, so please use with caution.
+
+## Installation
+
+To install, simply run the following:
+
+```
+npm i -g mwpm
+```
 
 ## Usage
 
 ```CLI
-mwpm [action]
+mwpm [action] [args...]
 ```
 
 ### Action: install
 
 ```CLI
-mwpm install
+mwpm install [name] [git repo URL]
+```
+
+or for directory mode:
+
+```CLI
+mwpm install [name] [git repo URL] -d [directory name]
 ```
