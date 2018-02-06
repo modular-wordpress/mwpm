@@ -1,7 +1,7 @@
 {
   "name": "mwpm",
   "version": "0.1.0",
-  "description": "",
+  "description": "Module package manager for the Modular Wordpress theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,19 @@
   "dependencies": {
     "ncp": "^2.0.0",
     "really-simple-args": "^1.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modular-wordpress/mwpm.git"
+  },
+  "keywords": [
+    "wordpress",
+    "modular",
+    "components"
+  ],
+  "bugs": {
+    "url": "https://github.com/modular-wordpress/mwpm/issues"
+  },
+  "homepage": "https://github.com/modular-wordpress/mwpm#readme"
 }
