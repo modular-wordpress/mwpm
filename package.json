@@ -1,6 +1,6 @@
 {
   "name": "mwpm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Module package manager for the Modular Wordpress theme",
   "main": "index.js",
   "scripts": {

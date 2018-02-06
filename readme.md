@@ -21,11 +21,17 @@ mwpm [action] [args...]
 ### Action: install
 
 ```CLI
-mwpm install [name] [git repo URL]
+mwpm install
+```
+
+### Action: add
+
+```CLI
+mwpm add [name] [git repo URL]
 ```
 
 or for directory mode:
 
 ```CLI
-mwpm install [name] [git repo URL] -d [directory name]
+mwpm add [name] [git repo URL] -d [directory name]
 ```
