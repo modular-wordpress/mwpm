@@ -31,7 +31,7 @@ module.exports = async (args, config) => {
         await deleteDirectory(`${wd}/${modulesPath}/_tmp/.git`);
 
         // copy the specified directory
-        await cp(`${wd}/${modulesPath}/_tmp/${direct}/*`, targetDirectory);
+        await cp(`${wd}/${modulesPath}/_tmp/${direct}`, targetDirectory);
 
         // delete the temp directory
         await deleteDirectory(`${wd}/${modulesPath}/_tmp`);
